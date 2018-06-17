@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Form</title>
+        <link rel="stylesheet" href="stylesheet1.css">
+        <script src="script.js"></script>
+        <script>
+            function checker(){
+                var ctl = document.getElementById('para1');
+                if(ctl.value.length > 200){
+                    alert("More than 200 words!");
+                }ß
+            }
+        </script>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+<!--===========================BODY==================BODY===============================================-->
+    <body>
+        <header>
+            <h1>Web Development</h1>
+            <hr>
+        </header>
+
+        <nav>
+            <!--Insert the nav bar here-->
+            <ul>
+                <li><a href="home.html">Home</a></li>
+                <li><a href="form.html">Form</a></li>
+                <li><a href="calculator.html">Calculator</a></li>
+            </ul>
+            <br />
+        </nav>
+        
+
+        <section>
+            <form action="submit.php" method="get">
+                <fieldset>
+                    <legend>Fill in the following:</legend>
+                    <b style="color:white;">Full Name:</b><input class ="inputs" type="text" name="name" size="25"></input>
+                    <b style="color:white;">Date of Birth:</b><input type="date" name="bday" class ="inputs">
+                    <b style="color:white;">Gender:</b>
+                    <select class ="inputs" name="Gender">
+                        <option class ="inputs" value="Male">Male</option>
+                        <option class ="inputs" value="Female">Female</option>
+                        <option class ="inputs" value="Other">Other</option>
+                    </select>
+                    <b style="color:white;">Email:</b><input type="email" name="email" class="inputs" size="25">
+                    <br />
+                    <textarea id ="para1" class ="inputs" name="message" rows="8" cols="32" maxlength="200" placeholder="Write about yourself under 200 characters here...."></textarea>
+                    <br />
+                    <input type="submit" class="button-style" value="Save" onclick="checker()"/>
+                    <input type="reset" class="button-style" id="resetbutton" value="Reset" /><b id="reset">  Click here to reset all fields!</b>
+                </fieldset>
+            </form>
+        </section>
+
+        <footer>
+            <!--Insert any footer content-->
+        </footer>
+    </body>
+</html>
